@@ -1,0 +1,31 @@
+.sidebar {
+    padding: 80px 15px 30px 15px;
+    border-left: 2px solid var(--mainColor);
+    border-right: 2px solid var(--mainColor);
+
+    &__title {
+        font-size: 20px;
+        border-bottom: 1px solid var(--mainColor);
+    }
+
+    &__list {
+        margin-top: 15px;
+
+        &-item {
+            cursor: pointer;
+            transition: var(--transition);
+
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+
+            &:hover {
+                color: var(--mainColor);
+            }
+
+            &--active {
+                color: var(--mainColor);
+            }
+        }
+    }
+}

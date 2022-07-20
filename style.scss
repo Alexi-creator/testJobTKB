@@ -1,0 +1,65 @@
+@import './scss/normalize';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import './scss/variables';
+
+@import './scss/layout/sidebar';
+@import './scss/layout/content';
+@import './scss/layout/header';
+@import './scss/layout/footer';
+
+@import './scss/components/elements';
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: minmax(290px, 1fr);
+    grid-template-areas: 
+        "header"
+        "content"
+        "footer";
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    padding: 0 15px;
+}
+
+.header {
+	grid-area: header;
+    border-left: 2px solid var(--mainColor);
+}
+
+.sidebar {
+	grid-area: sidebar;
+    display: none;
+}
+
+.content {
+	grid-area: content;
+    border-left: 2px solid var(--mainColor);
+}
+
+.footer {
+	grid-area: footer;
+    border-left: 2px solid var(--mainColor);
+}
+
+@media screen and (min-width: 768px) {
+    .wrapper {
+        grid-template-columns: auto 230px minmax(320px, 1200px) auto;
+        grid-template-areas: 
+            ". sidebar header ."
+            ". sidebar content ."
+            ". sidebar footer .";
+    }
+
+    .sidebar {
+        display: block;
+    }
+
+    .header, .content, .footer {
+        border-left: none;
+    }
+}

@@ -1,0 +1,10 @@
+.header {
+    border-bottom: 2px solid var(--mainColor);
+    border-right: 2px solid var(--mainColor);
+    padding: 10px;
+
+    &__search {
+        max-width: 280px;
+        margin: 0 auto;
+    }
+}

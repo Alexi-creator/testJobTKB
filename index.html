@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/personal.js" defer></script>
+    <script src="./main.js" defer></script>
+    <title>TKB</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <form action="" class="header__form form">
+                <div class="header__search form__item">
+                    <input class="form__input" name="search" type="search" placeholder="поиск...">
+                </div>
+            </form>
+        </header>
+
+        <nav class="sidebar">
+            <h3 class="sidebar__title">Меню</h3>
+            <ul class="sidebar__list">
+                <li>
+                    <a href="#" class="sidebar__list-item sidebar__list-item--active">Пункт 1</a>
+                </li>
+                <li>
+                    <a href="#" class="sidebar__list-item">Пункт 2</a>
+                </li>
+                <li>
+                    <a href="#" class="sidebar__list-item">Пункт 3</a>
+                </li>
+                <li>
+                    <a href="#" class="sidebar__list-item">Пункт 4</a>
+                </li>
+            </ul>
+        </nav>
+
+        <main class="content">
+            <form action="" class="form form--personal">
+                <div class="table-response">
+                    <table class="table">
+                        <thead>
+                                <tr>
+                                    <th>ФИО</th>
+                                    <th>Должность</th>
+                                    <th>Возраст</th>
+                                    <th>Компетенции</th>
+                                    <th class="table__without-border"></th>
+                                </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="form__item">
+                                        <input class="form__input" name="name" type="text" placeholder="ФИО" required />
+                                        <div class="form__item-message">Минимум 3 символа</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form__item">
+                                        <select class="form__select" name="select">
+                                            <option value="аналитик">аналитик</option>
+                                            <option selected="selected" value="менеджер">менеджер</option>
+                                            <option value="программист">программист</option>
+                                            <option value="юрист">юрист</option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form__item">
+                                        <input class="form__input" name="age" type="number" min="18" max="150" placeholder="Возраст" required />
+                                        <div class="form__item-message">Возраст больше 18</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form__item">
+                                        <textarea class="form__textarea" name="competencies" placeholder="Опишите компетенции"></textarea>
+                                    </div>
+                                </td>
+                                <td class="table__without-border">
+                                    <button class="button button--remove-row">---</button>
+                                </td>
+                            </tr>
+                        </tbody> 
+                    </table>
+                </div>
+                <div class="form__button-wrap">
+                    <button class="button form__button form__button--send">Отправить</button>
+                    <button class="button form__button form__button--add">Добавить</button>
+                </div>
+            </form>
+        </main>
+
+        <footer class="footer">© 2022 TKB Все права защищены.</footer>
+
+        <template id="template-personal-row">
+            <tr>
+                <td>
+                    <div class="form__item">
+                        <input class="form__input" name="name" type="text" placeholder="ФИО" required />
+                        <div class="form__item-message">Минимум 3 символа</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="form__item">
+                        <select class="form__select" name="select">
+                            <option value="аналитик">аналитик</option>
+                            <option selected="selected" value="менеджер">менеджер</option>
+                            <option value="программист">программист</option>
+                            <option value="юрист">юрист</option>
+                        </select>
+                    </div>
+                </td>
+                <td>
+                    <div class="form__item">
+                        <input class="form__input" name="age" type="number" placeholder="Возраст" required />
+                        <div class="form__item-message">Возраст больше 18</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="form__item">
+                        <textarea class="form__textarea" name="competencies" placeholder="Опишите компетенции"></textarea>
+                    </div>
+                </td>
+                <td class="table__without-border">
+                    <button class="button button--remove-row">---</button>
+                </td>
+            </tr>
+        </template>
+    </div>
+</body>
+</html>

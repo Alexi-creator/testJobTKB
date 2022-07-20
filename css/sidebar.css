@@ -1,0 +1,33 @@
+.sidebar {
+  padding: 80px 15px 30px 15px;
+  border-left: 2px solid var(--mainColor);
+  border-right: 2px solid var(--mainColor);
+}
+
+.sidebar__title {
+  font-size: 20px;
+  border-bottom: 1px solid var(--mainColor);
+}
+
+.sidebar__list {
+  margin-top: 15px;
+}
+
+.sidebar__list-item {
+  cursor: pointer;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.sidebar__list-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.sidebar__list-item:hover {
+  color: var(--mainColor);
+}
+
+.sidebar__list-item--active {
+  color: var(--mainColor);
+}
+/*# sourceMappingURL=sidebar.css.map */

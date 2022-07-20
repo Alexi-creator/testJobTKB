@@ -1,0 +1,43 @@
+.table-response {
+    overflow-x: auto;
+    max-width: 1170px;
+    width: 100%;
+
+    .table {
+        $block: &;
+
+        min-width: 900px;
+        width: 100%;
+        table-layout: fixed;
+        border-collapse: collapse;
+
+        & tr, & td {
+            overflow-wrap: break-word;
+            text-align: left;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 24px;
+        }
+
+        & th, & td, & th {
+            padding: 15px 10px;
+            border: 2px solid var(--mainColor);
+        }
+
+        & tr {
+            position: relative;
+        }
+
+        & td {
+            vertical-align: top;
+        }
+
+        & th, & td {
+            &.table__without-border {
+                width: 100px;
+                border: 2px solid transparent;
+                vertical-align: middle;
+            }
+        }
+    }
+}
